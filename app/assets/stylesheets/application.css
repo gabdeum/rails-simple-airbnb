@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+@import url("components/flat-card.css");
+
+.flat-show-picture-top {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  /* object-position: 50% 70%; */
+}
+
+.flat-show-container {
+  margin-top: -75px;
+}
+
+.flat-show-card {
+  background-color: #F8F9FA;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  border-radius: 4px;
+  /* overflow: hidden; */
+  margin-bottom: 24px;
+}

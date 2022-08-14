@@ -1,0 +1,49 @@
+<img src=<%= @flat.picture_url %> class="flat-show-picture-top" alt="">
+<div class="container flat-show-container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A little bit more about this flat</h3>
+        <p><%= @flat.description %></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.178579079273!2d5.451164814649835!3d43.310520982541256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9bef389084853%3A0x162748171b9bb009!2s10%20Bd%20de%20la%20Marne%2C%2013012%20Marseille!5e0!3m2!1sen!2sfr!4v1660494030691!5m2!1sen!2sfr" width="680" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="flat-show-card">
+        <h5 class="mb-4">Book this appartment</h5>
+        <form>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="book-from">From:</span>
+            <input type="text" class="form-control" placeholder="08/14/2022" aria-label="From" aria-describedby="book-from">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="book-to">To:</span>
+            <input type="text" class="form-control" placeholder="08/15/2022" aria-label="To" aria-describedby="book-to">
+          </div>
+          <button type="submit" class="btn btn-success" style="width: 100%;">Submit</button>
+        </form>
+      </div>
+
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <div class="flat-card-details">
+          <p class="me-3"><i class="fa-solid fa-people-group me-2"></i><%= @flat.number_of_guests %></p>
+          <p><i class="fa-solid fa-euro-sign me-2"></i><%= @flat.price_per_night %></p>
+        </div>
+      </div>
+      <div class="flat-show-card">
+        <div style="display: flex; justify-content: space-between;">
+          <h5 style="margin-bottom: 0px;">Share</h5>
+          <ul style="margin-bottom: 0px;">
+            <i class="fa-brands fa-facebook me-2"></i>
+            <i class="fa-brands fa-instagram me-2"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

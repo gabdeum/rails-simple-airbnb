@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 class="my-3">All flats</h1>
+  <p><%= (@flats.count > 1) ? "There are #{@flats.count} flats" : ((@flats.count == 1) ? "There is 1 flat" : "No flat found") %></p>
+  <div class="flat-cards-grid">
+    <% @flats.each do |flat| %>
+      <div class="flat-card">
+        <img src="<%= flat.picture_url %>" class="flat-card-image" alt="flat_picture">
+        <div class="flat-card-body">
+          <div>
+            <h5 class="flat-card-title"><%= flat.name %></h5>
+            <p class="flat-card-text"><%= flat.address %></p>
+          </div>
+          <div class="flat-card-details">
+            <p class="me-3"><i class="fa-solid fa-people-group me-2"></i><%= flat.number_of_guests %></p>
+            <p><i class="fa-solid fa-euro-sign me-2"></i><%= flat.price_per_night %></p>
+          </div>
+        </div>
+        <div class="flat-card-footer">
+          <%= link_to "More info", flat_path(flat.id), class: "card-link" %>
+          <%= link_to "Edit", edit_flat_path(flat.id), class: "card-link" %>
+          <%= link_to "Delete", flat_path(flat.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
